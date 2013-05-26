@@ -1,0 +1,17 @@
+<h1 id='hosting_github_pages_in_godaddycom'>Hosting Github Pages in Go-Daddy.com</h1>
+
+<p><a href='github.com'>GitHub</a> has done a great job by providing a free blogging platform through GitHub Pages. There are two types of blogs supported by GitHub at present. First one targetted to particular projects called &#8216;Project Pages&#8217;. The second one targetted to Github users, individuals or organizations called &#8216;User and Organization Pages&#8217;. The GitHub official documentation can be found <a href='https://help.github.com/categories/20/articles'>here</a>.</p>
+
+<p>In this post, i will describe only about &#8216;User and Organization Pages&#8217;. There are some differences in setting up &#8216;Project Pages&#8217; - that I would describe in some other post if neccessary.</p>
+
+<p>To create a &#8216;User and Organization Page&#8217; (I would stick to &#8216;page&#8217; for the rest of the post) one has to create a repository in GitHub with the following name &#8217;<strong>username</strong>.github.io&#8217;. There should be an &#8216;index.html&#8217; file in the root. The rest are all HTML/CSS/JS stuff as one wants to configure the content and look-and-feel.</p>
+
+<p>The blog gets hosted and get the URL as: <strong>username</strong>.github.com.</p>
+
+<p>However if someone wants to host in a custom domain, he needs to get a domain name registered via <a href='godaddy.com'>Go-Daddy</a> or some other domain name registerer services. I did it through <a href='godaddy.com'>Go-Daddy</a>.</p>
+
+<p>Once that is done, one needs to do two things: - Create a file called &#8216;CNAME&#8217; and put that in the blog root, in github repository. The content of the &#8216;CNAME&#8217; file is just the new domain one is interested in. - In the domain management page of <a href='godaddy.com'>Go-Daddy</a> add two records of type &#8216;A&#8217; to point to the magic IP <em>204.232.175.78</em>.</p>
+
+<p>After that, one has to wait for some time for DNS to take effect. Th waiting time can range from a few minutes to even hours.</p>
+
+<p>You can check my repository <a href='https://github.com/snandan/snandan.github.io'>snandan.github.io</a> for reference.</p>
