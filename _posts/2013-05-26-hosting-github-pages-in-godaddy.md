@@ -1,5 +1,7 @@
-Hosting Github Pages in Go-Daddy.com
-==========
+---
+layout: post
+title: Hosting Github Pages in Go-Daddy.com
+---
 
 [GitHub](github.com) has done a great job by providing a free blogging platform through GitHub Pages. 
 There are two types of blogs supported by GitHub at present. First one targetted to particular projects called 'Project Pages'. 
