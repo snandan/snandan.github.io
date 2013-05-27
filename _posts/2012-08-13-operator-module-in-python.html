@@ -1,0 +1,36 @@
+---
+layout: post
+title: Operator module in Python
+tags:
+- Lisp
+- Python
+status: publish
+type: post
+published: true
+meta: {}
+---
+Python has a fantastic module called 'operator'.
+The full documentation can be found in: <a title="Python docs" href="http://docs.python.org/library/operator">http://docs.python.org/library/operator</a>
+It has three main objects:
+<strong>attrgetter</strong> : After, f=attrgetter('name'), the call f(r) returns r.name. <em>Looks for attribute</em>
+<strong>itemgetter</strong> : After, f=itemgetter(2), the call f(r) returns r[2]. <em>Looks for indexed item</em>
+<strong> methodcaller  </strong>: After, f=methodcaller('name'), the call f(r) returns r.name(). <em>Looks for method<strong>
+</strong></em>
+
+[sourcecode language="python" wraplines="false" collapse="false"]
+&gt;&gt;&gt; import operator
+&gt;&gt;&gt; l_of_l = [['a', 5, 'b'], ['z', 1, 'y'], ['p', 4, 'g']]
+&gt;&gt;&gt; sorted(l_of_l, key=operator.itemgetter(1))
+[['z', 1, 'y'], ['p', 4, 'g'], ['a', 5, 'b']]
+&gt;&gt;&gt; sorted(l_of_l, key=operator.itemgetter(0))
+[['a', 5, 'b'], ['p', 4, 'g'], ['z', 1, 'y']]
+&gt;&gt;&gt; sorted(l_of_l, key=operator.itemgetter(2))
+[['a', 5, 'b'], ['p', 4, 'g'], ['z', 1, 'y']]
+[/sourcecode]
+
+Anything which can compete with the first example above is the following Lisp code
+<div>
+<div id="LC1">(setf l_of_l '((z 1 y) (p 4 g) (a 5 b)))</div>
+<div id="LC2">(sort l_of_l #'(lambda (a b) (&lt; (car (cdr a))</div>
+<div id="LC3">                                (car (cdr b)))))</div>
+</div>

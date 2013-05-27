@@ -1,0 +1,85 @@
+---
+layout: post
+title: Command line editing in Python
+tags:
+- Python
+status: publish
+type: post
+published: true
+meta:
+  _wpas_mess: Command line editing in Python http://wp.me/p2F3BU-19
+  _wpas_done_facebook: '1'
+---
+Python has libraries which do wonders if one wants to use command line editing in their software. The most noticeable of them are discussed here
+<h1>readline</h1>
+This basically implements the <a title="http://tiswww.case.edu/php/chet/readline/readline.html" href="http://tiswww.case.edu/php/chet/readline/readline.html" target="_blank">GNU readline library</a> in Python. This can be used for command line text completion using 'tab' and also access history items using up-arrow and down-arrow keys. The full documentation can be found in <a title="http://docs.python.org/library/readline.html" href="http://docs.python.org/library/readline.html" target="_blank">Python standard documentation</a>.
+
+Before we continue, let us talk a little about editing modes. There are two modes of editing supported in GNU readline - <strong>emacs</strong> and <strong>vi</strong>. One can choose any one of them as a mode for editing command line inputs. Once set, it supports the most commonly used key bindings used in that mode. Genrally <strong>emacs</strong> is the default one. Most shells including bash and csh provide emacs mode for editing.
+
+To use readline, you need to import the corresponding module
+
+[sourcecode lang="Python"]
+import readline
+[/sourcecode]
+
+Readline can be configured to use different set of key bindings if someone needs so. The key bindings can be specified in a <em>initrc </em>file and read in. The syntax of the init file has been described <a title="http://tiswww.case.edu/php/chet/readline/readline.html#SEC9" href="http://tiswww.case.edu/php/chet/readline/readline.html#SEC9" target="_blank">here.</a>
+
+[sourcecode lang="Python" firstline="3"]
+readline.read_init_file('readline_init.rc')
+[/sourcecode]
+
+Alternatively you can register each configuration seperately
+
+[sourcecode lang="Python" firstline="5"]
+readline.parse_and_bind('tab: complete')
+readline.parse_and_bind('completion-ignore-case: on')
+[/sourcecode]
+
+In command line based programs, there are generally an all encompassing loop called the <em>command loop</em> which waits for the user input, executes it and gets back to the waiting state. Common signals are handled so that user does not accidentally end the program.  On a very high level a typical usage is like the following
+
+[sourcecode lang="Python" firstline="8"]
+while True:
+line = raw_input('my_shell&gt;  ')
+if line == 'quit':
+    break
+print 'executing command', line
+[/sourcecode]
+
+Readline needs a function to be registered which would do the actual completion. It should take two parameters.
+
+[sourcecode lang="Python" firstline="14"]
+def complete_func (text, count):
+[/sourcecode]
+
+First one is the text to be completed and another one is a count. Readline would call the function with these to parameters whenever someone types the tab (or other completer key combination) key. The function should return the list of matches.
+
+A very simple implementation of that would be the following:
+
+[sourcecode lang="Python" firstline="14" wraplines="false"]
+def complete_func (text, count):
+options = ['help', 'list', 'quit', 'mycmd1', 'mycmd2', 'yourcmd']
+matches = None
+
+if text:
+    matches = [m for m in options if m.startswith(text)]
+
+return matches
+[/sourcecode]
+<h1>rlcompleter</h1>
+Rlcompleter is another nifty library in Python. This helps in doing tab completion for Python internal symbols. This is very helpful while testing out some code in Python interactive shell. This is dependent on 'readline'  library.
+
+[sourcecode lang="Python" firstline="1"]
+import readline
+import rlcompleter
+
+readline.parse_and_bind('tab: complete')
+[/sourcecode]
+
+Now if you type '__' and hit 'tab' twice, you would get the following:
+
+[sourcecode lang="Python"]
+&gt;&gt;&gt; __
+__debug__ __doc__ __import__( __name__ __package__
+[/sourcecode]
+
+There is another very useful package in Python for command processing called <a title="http://docs.python.org/library/cmd.html" href="http://docs.python.org/library/cmd.html" target="_blank">cmd</a>. But I am saving that for another post.
