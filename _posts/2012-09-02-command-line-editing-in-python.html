@@ -18,44 +18,44 @@ Before we continue, let us talk a little about editing modes. There are two mode
 
 To use readline, you need to import the corresponding module
 
-[sourcecode lang="Python"]
+{% highlight python %}
 import readline
-[/sourcecode]
+{% endhighlight %}
 
 Readline can be configured to use different set of key bindings if someone needs so. The key bindings can be specified in a <em>initrc </em>file and read in. The syntax of the init file has been described <a title="http://tiswww.case.edu/php/chet/readline/readline.html#SEC9" href="http://tiswww.case.edu/php/chet/readline/readline.html#SEC9" target="_blank">here.</a>
 
-[sourcecode lang="Python" firstline="3"]
+{% highlight python %}
 readline.read_init_file('readline_init.rc')
-[/sourcecode]
+{% endhighlight %}
 
 Alternatively you can register each configuration seperately
 
-[sourcecode lang="Python" firstline="5"]
+{% highlight python %}
 readline.parse_and_bind('tab: complete')
 readline.parse_and_bind('completion-ignore-case: on')
-[/sourcecode]
+{% endhighlight %}
 
 In command line based programs, there are generally an all encompassing loop called the <em>command loop</em> which waits for the user input, executes it and gets back to the waiting state. Common signals are handled so that user does not accidentally end the program.  On a very high level a typical usage is like the following
 
-[sourcecode lang="Python" firstline="8"]
+{% highlight python %}
 while True:
-line = raw_input('my_shell&gt;  ')
+line = raw_input('my_shell> ')
 if line == 'quit':
     break
 print 'executing command', line
-[/sourcecode]
+{% endhighlight %}
 
 Readline needs a function to be registered which would do the actual completion. It should take two parameters.
 
-[sourcecode lang="Python" firstline="14"]
+{% highlight python %}
 def complete_func (text, count):
-[/sourcecode]
+{% endhighlight %}
 
 First one is the text to be completed and another one is a count. Readline would call the function with these to parameters whenever someone types the tab (or other completer key combination) key. The function should return the list of matches.
 
 A very simple implementation of that would be the following:
 
-[sourcecode lang="Python" firstline="14" wraplines="false"]
+{% highlight python %}
 def complete_func (text, count):
 options = ['help', 'list', 'quit', 'mycmd1', 'mycmd2', 'yourcmd']
 matches = None
@@ -64,22 +64,22 @@ if text:
     matches = [m for m in options if m.startswith(text)]
 
 return matches
-[/sourcecode]
+{% endhighlight %}
 <h1>rlcompleter</h1>
 Rlcompleter is another nifty library in Python. This helps in doing tab completion for Python internal symbols. This is very helpful while testing out some code in Python interactive shell. This is dependent on 'readline'  library.
 
-[sourcecode lang="Python" firstline="1"]
+{% highlight python %}
 import readline
 import rlcompleter
 
 readline.parse_and_bind('tab: complete')
-[/sourcecode]
+{% endhighlight %}
 
 Now if you type '__' and hit 'tab' twice, you would get the following:
 
-[sourcecode lang="Python"]
-&gt;&gt;&gt; __
+{% highlight python %}
+>>> __
 __debug__ __doc__ __import__( __name__ __package__
-[/sourcecode]
+{% endhighlight %}
 
 There is another very useful package in Python for command processing called <a title="http://docs.python.org/library/cmd.html" href="http://docs.python.org/library/cmd.html" target="_blank">cmd</a>. But I am saving that for another post.
