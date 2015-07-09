@@ -30,26 +30,28 @@ done in this language, like creating 'infinite' data-structures.  I
 hope you need an example at this point to make things clear. Here it
 goes: I list in Haskell can be written like this:
 
-[code lang="haskell"]
+{% highlight haskell %}
 ghci> let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-[/code]
+{% endhighlight %}
 This means 'a' is a list of ten numbers, 1 to 10. This can
 concisely be written as the following:
-[code lang="haskell"]
+{% highlight haskell %}
 ghci> leta = [1..10]
-[/code]
+{% endhighlight %}
 This is same the the above.  However in Haskell
 allows us to write the following:
-[code lang="haskell"]
+{% highlight haskell %}
 ghci> let a =[1..]
-[/code]
+{% endhighlight %}
 This is an infinite list of numbers starting from
 1. Please do not try to print it. It will continue to print infinite
 stream of numbers and you would need to manually abort the run.  You
 may now ask what is the use of such structure and that would be a
 totally valid question.  You can use it something like this:
-[code lang="haskell"] ghci> let a = [1..]  ghci> take 3 a [1, 2, 3]
-[/code] The function 'take' number of elements as specified by the
+{% highlight haskell %}
+ghci> let a = [1..]  ghci> take 3 a [1, 2, 3]
+{% endhighlight %}
+The function 'take' number of elements as specified by the
 first argument from the second argument which is a list. In this
 example the first three items are taken and the rest are discarded,
 not even calculated. This may seem to be a lame example (why not use
@@ -59,15 +61,21 @@ advantage lot of times.  In Haskell, we do not need to tell how to
 calculate - rather we need to clearly tell what the problem statement
 is. And sometimes that is the harder part.  For an example let us try
 to find all the Pythagorean triplets occurring between 1 and 20. In
-Haskell we can write it like the following [code lang="haskell"] ghci>
-[(a, b, c) | c <-[1..20], b <- [1..c], a <- [1..b], c^2 == a^2 + b^2]
-[(3, 4, 5), (6, 8, 10), (5, 12, 13)] [/code]
+Haskell we can write it like the following
+{% highlight haskell %}
+ghci>[(a, b, c) | c <-[1..20], b <- [1..c], a <- [1..b], c^2 == a^2 + b^2]
+[(3, 4, 5), (6, 8, 10), (5, 12, 13)]
+{% endhighlight %}
 
 Another interesting example which shows the power of Haskell is the
-quicksort algorithm.  [code lang="haskell"] qsort [] = [] qsort (x:xs)
-= qsort smaller x ++ [x] ++ qsort larger x where smaller x =
-[a | a <- xs, a <= x] larger x = [a | a <- xs, a > x] [/code] Let's
-see, how the above example works.  The above quicksort algorithm is
+quicksort algorithm.
+{% highlight haskell %}
+qsort [] = [] qsort (x:xs)
+         = qsort smaller x ++ [x] ++ qsort larger x
+                 where smaller x =[a | a <- xs, a <= x]
+                 larger x = [a | a <- xs, a > x]
+{% endhighlight %}
+Let's see, how the above example works.  The above quicksort algorithm is
 recursive. The first line is the base condition. It says, qsort on an
 empty list results in an empty list. The start of the second line
 rescribes qsort on a non-empty list denoted by (x:xs). Lists in
