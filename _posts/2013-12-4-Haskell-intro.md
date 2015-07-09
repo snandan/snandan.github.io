@@ -1,3 +1,14 @@
+---
+layout: post
+title: Introduction to Haskell
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+
+
 I had been trying to learn functional programming for some time
 now. Last time, my effort two years ago, failed kind of in a miserable
 way. I tried too many things at once, Haskell, Scheme, Clojure all
