@@ -1,8 +1,54 @@
+title: Malloc Thoughts
+description: 'allocated space for thoughts'
+
+owner:
+  name: Suman Nandan
+  email: suman.nandan@gmail.com
+  github: snandan
+  linkedin: sumannandan
+  facebook: suman.nandan3
+
+sharing:
+  twitter: true
+  linkedin: true
+  facebook: true
+  google_plus: true
+  reddit: true
+
+# Post sharing icons
+sharing:
+    twitter: true
+    linkedin: true
+    facebook: true
+    google_plus: true
+    reddit: true
+
+# Disqus comments configuration (leave blank to disable comments)
+disqus_shortname: 'snandan.github.io'
+
+# Jekyll configuration
+permalink: /:year/:month/:day/:title/
+paginate: 4
+
+# Markdown
+# markdown: redcarpet
 highlighter: rouge
 
-maruku:
-  use_tex: true
-  use_divs: true
-  png_engine: blahtex
-  png_dir: images/latex/
-  png_url: /images/latex/
+# Enable when using redcarpet
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data', 'footnotes']
+
+# Enable when using kramdown (you will need to use ~~~ instead of ```)
+# kramdown:
+#   auto_ids: true
+#   footnote_nr: 1
+#   entity_output: as_char
+#   toc_levels: 1..6
+#   use_coderay: false
+
+# Gems
+gems: ['jekyll-paginate']
+
+# Exclude
+exclude: ['README.md']
+

@@ -6,6 +6,7 @@ status: publish
 type: post
 published: true
 meta: {}
+comments: true
 ---
 
 
@@ -88,3 +89,4 @@ the second item is 'x' itself and the third item is sorted list of
 items greater than 'x'. I hope now you can appreciate how the
 algorithm has been described so succinctly. I my other posts I will
 describe some more regarding Haskell. Audios!
+

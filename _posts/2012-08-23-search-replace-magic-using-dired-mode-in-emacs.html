@@ -7,27 +7,28 @@ status: publish
 type: post
 published: true
 meta: {}
+comments: true
 ---
 Recently I learned a new trick to search and replace a particular word across multiple files in a directory using dired-mode. As a programmer I need to do this kind of changes very often in the source code. Before learning this, the best I could do was search the word in cscope, go to each file and do 'M-x query-replace' on those files.
 
 Here are the steps:
-<h1>1. Open the directory in Emacs using dired-mode</h1>
+<h4>1. Open the directory in Emacs using dired-mode</h4>
 <a href="http://allocthoughts.files.wordpress.com/2012/08/01.png"><img class="alignnone size-full wp-image-59" title="files in dired mode" src="http://allocthoughts.files.wordpress.com/2012/08/01.png" alt="files in dired mode" width="584" height="299" /></a>
 
 I am interested in changing a variable called '_myCount' to '_mCount' across all the files where it occurs.
-<h1>2. Select all the files where the word occurs</h1>
+<h4>2. Select all the files where the word occurs</h4>
 I can select ('mark' in dired-mode's terminology) all the files in the directory using 'dired-mark-files-containing-regexp' commands. It is generally bound to 'Shift-% g' key combination.
 
 <a href="http://allocthoughts.files.wordpress.com/2012/08/1.png"><img class="aligncenter size-full wp-image-60" title="mark files containing a regexp" src="http://allocthoughts.files.wordpress.com/2012/08/1.png" alt="mark files containing a regexp" width="584" height="496" /></a>It will prompt for the word. I need to insert '_myCount' there. It will mark the files containing the word. In my example the files marked in RED below contains the word.
 
 <a href="http://allocthoughts.files.wordpress.com/2012/08/2.png"><img class="aligncenter size-full wp-image-61" title="marked files" src="http://allocthoughts.files.wordpress.com/2012/08/2.png" alt="marked files" width="584" height="496" /></a>If someone is using a version control which requires the files to be identified before editing them (as in perforce - 'p4 edit') - that can be done by the 'Shift-!' command which takes as an input the shell command to be run on the marked files.
-<h1>3. Query replace in marked files:</h1>
+<h4>3. Query replace in marked files:</h4>
 Next I need to use the dired-mode command 'Q'.
 
 <a href="http://allocthoughts.files.wordpress.com/2012/08/3.png"><img class="aligncenter size-full wp-image-62" title="3" src="http://allocthoughts.files.wordpress.com/2012/08/3.png" alt="" width="584" height="496" /></a>This will ask for the word to replace and the new word. Upon entering those, it will start cycling through the marked files containing the word.
 
 <a href="http://allocthoughts.files.wordpress.com/2012/08/4.png"><img class="aligncenter size-full wp-image-63" title="4" src="http://allocthoughts.files.wordpress.com/2012/08/4.png" alt="" width="584" height="299" /></a>
-<h1>4. Confirm the changes:</h1>
+<h4>4. Confirm the changes:</h4>
 At this point I can update each occurrence of the word by selecting 'y' or can update all the occurrences of the current file by selecting '!'.
 
 Once done I can check the updates done.

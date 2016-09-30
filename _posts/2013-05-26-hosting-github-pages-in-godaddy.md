@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hosting Github Pages in Go-Daddy.com
+comments: true
 ---
 
 [GitHub](https://github.com) has done a great job by providing a free blogging platform through GitHub Pages. 

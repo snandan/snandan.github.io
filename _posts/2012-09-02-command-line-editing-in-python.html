@@ -9,9 +9,10 @@ published: true
 meta:
   _wpas_mess: Command line editing in Python http://wp.me/p2F3BU-19
   _wpas_done_facebook: '1'
+comments: true
 ---
 Python has libraries which do wonders if one wants to use command line editing in their software. The most noticeable of them are discussed here
-<h1>readline</h1>
+<h4>readline</h4>
 This basically implements the <a title="http://tiswww.case.edu/php/chet/readline/readline.html" href="http://tiswww.case.edu/php/chet/readline/readline.html" target="_blank">GNU readline library</a> in Python. This can be used for command line text completion using 'tab' and also access history items using up-arrow and down-arrow keys. The full documentation can be found in <a title="http://docs.python.org/library/readline.html" href="http://docs.python.org/library/readline.html" target="_blank">Python standard documentation</a>.
 
 Before we continue, let us talk a little about editing modes. There are two modes of editing supported in GNU readline - <strong>emacs</strong> and <strong>vi</strong>. One can choose any one of them as a mode for editing command line inputs. Once set, it supports the most commonly used key bindings used in that mode. Genrally <strong>emacs</strong> is the default one. Most shells including bash and csh provide emacs mode for editing.
@@ -65,7 +66,7 @@ if text:
 
 return matches
 {% endhighlight %}
-<h1>rlcompleter</h1>
+<h4>rlcompleter</h4>
 Rlcompleter is another nifty library in Python. This helps in doing tab completion for Python internal symbols. This is very helpful while testing out some code in Python interactive shell. This is dependent on 'readline'  library.
 
 {% highlight python %}

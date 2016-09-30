@@ -1,6 +1,7 @@
 ---
 layout: post
 title: C++ new language features
+comments: true
 ---
 
 # Introduction #
