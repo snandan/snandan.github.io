@@ -17,7 +17,7 @@ layout: default
             {{ post.date | date: site.date_format }}
             {% if site.disqus_shortname %}
               &middot;
-              <a href="{{ site.url }}{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>
+              <a href="{{ site.url }}{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{ post.url }}">Comments</a>
               {% if post.update_date %}
                 &middot;
                 Updated {{ post.update_date | date: site.date_format }}

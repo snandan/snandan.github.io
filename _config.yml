@@ -1,5 +1,8 @@
 title: Malloc Thoughts
 description: 'allocated space for thoughts'
+date_format: '%B %d, %Y'
+# url: snandan.github.io
+# url: /
 
 owner:
   name: Suman Nandan
