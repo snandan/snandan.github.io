@@ -14,12 +14,16 @@ Python has a fantastic module called 'operator'.
 The full documentation can be found in: <a title="Python docs" href="http://docs.python.org/library/operator">http://docs.python.org/library/operator</a>
 It has three main objects:
 
-<strong>attrgetter</strong> : After, f=attrgetter('name'), the call f(r) returns r.name. <em>Looks for attribute</em>
-
-<strong>itemgetter</strong> : After, f=itemgetter(2), the call f(r) returns r[2]. <em>Looks for indexed item</em>
-
-<strong> methodcaller </strong>: After, f=methodcaller('name'), the call f(r) returns r.name(). <em>Looks for method<strong>
-</strong></em>
+<p>
+<p>
+<strong>attrgetter</strong>: After, f=attrgetter('name'), the call f(r) returns r.name. <em>Looks for attribute</em>
+</p>
+<p>
+<strong>itemgetter</strong>: After, f=itemgetter(2), the call f(r) returns r[2]. <em>Looks for indexed item</em>
+</p>
+<p>
+<strong>methodcaller</strong>: After, f=methodcaller('name'), the call f(r) returns r.name(). <em>Looks for method</em>
+</p>
 
 {% highlight python %}
 >>> import operator
