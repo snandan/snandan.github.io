@@ -34,7 +34,8 @@ permalink: /:year/:month/:day/:title/
 paginate: 4
 
 # Markdown
-# markdown: redcarpet
+#markdown: redcarpet
+markdown: kramdown
 highlighter: rouge
 
 # Enable when using redcarpet
@@ -48,6 +49,11 @@ redcarpet:
 #   entity_output: as_char
 #   toc_levels: 1..6
 #   use_coderay: false
+maruku:
+  use_tex: true
+  use_divs: true
+  png_engine: blahtex
+  png_dir: images/latex/
 
 # Gems
 gems: ['jekyll-paginate']
