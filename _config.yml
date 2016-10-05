@@ -59,8 +59,9 @@ maruku:
   png_dir: images/latex/
 
 # Gems
-gems: ['jekyll-paginate']
+gems: ['jekyll-paginate', 'jemoji']
 
 # Exclude
 exclude: ['README.md']
 
+google_analytics: UA-85196065-1
