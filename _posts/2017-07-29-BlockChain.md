@@ -1,14 +1,22 @@
 ---
 layout: post
 title: BlockChain
+tags: []
+comments: true
+status: publish
+type: post
+published: true
+meta: {}
 comments: true
 ---
 
-<a title="By Davidstankiewicz (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ABlockchain_Illustration.jpg"><img width="512" alt="Blockchain Illustration" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Blockchain_Illustration.jpg/512px-Blockchain_Illustration.jpg"/></a>
 
 
 Blockchain today is what Television was in 1930s or Internet in 1990s. For most of us it is a mystery. Some of us who knows, have no idea how this thing works. Very few have the technical know-how to grasp this fully.
 However, as you don't need to know how CRT or Plasma physics works to watch television or know about HTTP protocol to use the Internet, it is optional to know all about Blockchain to use it in daily lives.
+
+<a title="By Davidstankiewicz (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ABlockchain_Illustration.jpg"><img width="512" alt="Blockchain Illustration" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Blockchain_Illustration.jpg/512px-Blockchain_Illustration.jpg"/></a>
+
 
 The concept of Blockchain started when an unknown person under the pseudonym of **Satoshi Nakamoto** (we still don't know who that person is) uploaded a paper in [internet](http://itcoin.org/bitcoin.pdf) suggesting an alternative form of money which does not have any physical form (like paper notes or metal coins) and which is not governed by any authority (banks). This was around the time when [Lehman Brothers](https://en.wikipedia.org/wiki/Lehman_Brothers) got bankrupt. People started to feel if any central authority can be trusted with their money. If those banks goes corrupt or falters, then that thing can have very big impact.
 
@@ -33,7 +41,6 @@ There can be various applications of blockchain technology. bitcoin - or this al
 
 Coming back to how the magic works, lets consider that we have a text file where the names of everyone in the world and how much money they have is listed. 
 
- <img src="{{ site.url }}/_assets/middle_earth_ledger.png">
  ![GOT-chars]({{ site.baseurl }}/_assets/middle-earth-ledger.png)
  
 If I want to buy something, I pay by editing that file. Subtract the price from the amount of money I have and add that to the merchant's amount.
