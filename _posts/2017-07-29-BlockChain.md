@@ -41,7 +41,7 @@ There can be various applications of blockchain technology. bitcoin - or this al
 
 Coming back to how the magic works, lets consider that we have a text file where the names of everyone in the world and how much money they have is listed. 
 
- ![GOT-chars]({{ site.baseurl }}/_assets/middle-earth-ledger.png)
+ <a><img src="https://lh3.googleusercontent.com/2eh_VNqCRicpUynAeczI6nYf2-DAmVWo3e0du6017V7oHT7ONfYWdP0BCuuwGb8JOvL-zTu5gJL4lC3NSFgpQysDf91c2XrWOo0x_R8grRiGklPOM9YpSusCV_SF_onsWcdpJDF1bJc7oThKlttvNU780Xa38XHoGOYsOjg2-gwLBqeUlkzag9va7gdoL18gWQFscnCZdCDRp-7JdooCCgZ-7eCgqnV3fwbEN50Kl9BMYg6acXbadqiXj2d0Zse_An6dZPIDuIvHSGD9ai899vCsSD-RzgJxAExTC5khVhLeDYWdTaZh8191MknfUdkltm6XTSK2eK7HfqU7oPcxJ4ul-9vwi2iJHiJzJX18U144V-0mtjx3wCbqvT-5l8N6DjsKTp10YUPlso9auqtrwvhqdlCHps9jbwvBdRaAMphHxvqHnilWm4U5V0Ctw6HyXjl17nnhQjoNT4J1c0VECk-BpXmYsZ-ygngwBQgaWCtumgIVdQl6OPds7TNPOvJ7PlJ_63gxofjiYz_rZOF1ack18I2-I7jl3ZQj9cshROIeiXXl17_k6dypsSoZlzAc9v7rZ23LRDYMkz3KgIcrgdfzUK6jhQo1E6asP0iHVASjQhszMt02Y9asUhhvGm3gYnwX32LqOW7W8ICqjf1G3rcrIHKtFFF-2bltu8y8U9AxGQ=w908-h812-no"></a>
  
 If I want to buy something, I pay by editing that file. Subtract the price from the amount of money I have and add that to the merchant's amount.
 The file cannot be tampered without making any valid transaction. And the file is almost impossible to hack. Oh! and one more thing. There is no single copy of that file. Everyone in the world have exactly same copy of the file. If any change is made, the change is synced to everyone's copy.
