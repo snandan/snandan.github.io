@@ -65,3 +65,4 @@ gems: ['jekyll-paginate', 'jemoji']
 exclude: ['README.md']
 
 google_analytics: UA-85196065-1
+plugins: [jekyll-paginate]
