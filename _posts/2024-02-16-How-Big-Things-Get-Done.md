@@ -12,7 +12,7 @@ author: Bent Flyvbjerg & Dan Gardner
 - <iframe type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B0B3HS4C98&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_HKMTAKR07DQ1EMKX8CDA" ></iframe>
 -
 - ### TL;DR
-	- Ever wonder how big projects like building townships, commissioning factories or laying highways are planned? How are budget, time etc. for these projects are forecasted? Is there any science behind that? The authors have not only explored that in this book but also suggested proposals for improving that.  They have also given interesting anecdotes regarding how the Sydney Opera House, Guggenheim Museum at Bilbao and Heathrow Airport Terminal 5 were planned and build.
+	- Ever wonder how big projects like building townships, commissioning factories or laying highways are planned? How are budget, time etc. for these projects are forecasted? Is there any science behind that? The authors have not only explored that in this book but also suggested proposals for improving that.  They have also shared interesting anecdotes regarding how the Sydney Opera House, Guggenheim Museum at Bilbao and Heathrow Airport Terminal 5 were planned and build.
 - ### Think Slow, Act Fast:
 	- Planning is important. Spend more time to plan the project. Once the planning is done, start acting to finish each milestone of the project as soon as possible. If possible, divide milestones into inch-stones. The less time the execution of the project is in flight, the lesser would be the probability of it getting derailed.
 - ### The Commitment Fallacy:
